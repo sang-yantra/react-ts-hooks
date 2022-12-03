@@ -1,14 +1,31 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import { useState } from "react";
+import {
+  BrowserRouter,
+  RouterProvider,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
+import reactLogo from "./assets/react.svg";
+import Drawer from "./components/Drawer/Drawer";
+import Hooks from "./components/HooksList/Hooks";
+import UseState from "./components/UseState/UseState";
 
-function App() {
+export interface IAppProps {}
+
+const App: React.FC<IAppProps> = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <h1 className="">Hello world!</h1>
+    <div className="">
+      <Drawer>
+        <section className="">
+          <h1 className="">Hooks Api Reference</h1>
+          <Outlet />
+        </section>
+      </Drawer>
     </div>
   );
-}
+};
 
 export default App;
