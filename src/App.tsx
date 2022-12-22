@@ -20,7 +20,6 @@ const App: React.FC<IAppProps> = () => {
     <div className="">
       <Drawer>
         <section className="">
-          <h1 className="">Hooks Api Reference</h1>
           <Outlet />
         </section>
       </Drawer>

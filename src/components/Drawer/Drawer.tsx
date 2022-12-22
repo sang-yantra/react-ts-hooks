@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { GiHamburgerMenu } from "react-icons/gi";
 type Props = {
   children?: JSX.Element;
 };
@@ -10,11 +10,8 @@ export default function Drawer({ children }: Props) {
     <div className="drawer drawer-mobile">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content scroll-smooth scroll-p-10">
-        <label
-          htmlFor="my-drawer"
-          className="btn btn-sm btn-primary drawer-button"
-        >
-          Open drawer
+        <label htmlFor="my-drawer" className="drawer-button cursor-pointer">
+          <GiHamburgerMenu />
         </label>
         {children}
       </div>
@@ -22,7 +19,9 @@ export default function Drawer({ children }: Props) {
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
         <aside className="bg-base-200 w-80">
           <ul className="menu menu-compact flex flex-col p-0 px-4">
-            <li></li>
+            <li>
+              <Link to="/hooks">HOOKS</Link>
+            </li>
             <li className="menu-title">
               <span>Basic hooks</span>
             </li>
