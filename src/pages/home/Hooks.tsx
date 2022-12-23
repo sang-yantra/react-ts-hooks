@@ -4,6 +4,7 @@ import StateHook from "./StateHook";
 import ContextHook from "./ContextHook";
 import RefHook from "./RefHook";
 import EffectHooks from "./EffectHooks";
+import PerformanceHooks from "./PerformanceHooks";
 export interface IHomeProps {}
 
 const Hooks: React.FC<IHomeProps> = () => {
@@ -15,6 +16,7 @@ const Hooks: React.FC<IHomeProps> = () => {
         <ContextHook />
         <RefHook />
         <EffectHooks />
+        <PerformanceHooks />
       </HooksConatiner>
     </main>
   );

@@ -9,7 +9,7 @@ export interface IHookCode {
   functionName: string;
   functionBody: string;
   functionParams?: string;
-  children?: JSX.Element;
+  children?: React.ReactNode;
 }
 
 const CodeEditor: React.FC<IHookCode> = ({
@@ -50,6 +50,7 @@ const CodeEditor: React.FC<IHookCode> = ({
                 <Line>
                   <FunParanthesis>{closingBraces}</FunParanthesis>
                 </Line>
+                {children}
               </code>
             </pre>
           </div>
