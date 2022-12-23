@@ -1,13 +1,12 @@
 import React from "react";
-import HookCode from "./HookCode";
+import CodeEditor from "./CodeEditor";
 import HookTitle from "./HookTitle";
 export interface IStateHook {}
 const pClassName = "whitespace-pre-wrap my-4";
 
-const exampleText = `
-function ImageGallery {
-    const [index, setIndex] = useState(0);
-}`;
+const exampleText = `     const [index, setIndex] = <span class="sp-syntax-keyword">useState</span>(0);
+    <em class="sp-syntax-comments">/// something...</em>
+`;
 
 const StateHook: React.FC<IStateHook> = () => {
   return (
@@ -31,9 +30,8 @@ const StateHook: React.FC<IStateHook> = () => {
           reducer function.
         </li>
       </ul>
-      <HookCode>
-        <div>{exampleText}</div>
-      </HookCode>
+      <CodeEditor functionName="ImageComponent" functionBody={exampleText} />
+      <hr className="my-6 block border-b border-primary-content"></hr>
     </section>
   );
 };
