@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .link {
+    @apply inline text-primary border-b border-opacity-0 hover:border-opacity-100 duration-100 ease-in transition 
+        leading-normal;
+  }
+}

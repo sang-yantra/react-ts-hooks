@@ -1,6 +1,6 @@
 import HookTitle from "./HookTitle";
 import { pClassName } from "../../../src/constants/css-classses";
-import CodeEditor from "./CodeEditor";
+import CodeEditor from "../../components/CodeEditor/CodeEditor";
 interface IRefHook {}
 
 const exampleText = `

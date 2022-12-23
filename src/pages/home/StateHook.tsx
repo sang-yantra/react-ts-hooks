@@ -1,5 +1,5 @@
 import React from "react";
-import CodeEditor from "./CodeEditor";
+import CodeEditor from "../../components/CodeEditor/CodeEditor";
 import HookTitle from "./HookTitle";
 export interface IStateHook {}
 const pClassName = "whitespace-pre-wrap my-4";
